@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen Final</title>
+    <!-- Lien vers la feuille de style Bootstrap -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- lien vers les autres feuilles de codes JS, ajax et CSS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="examenFinal.js"></script>
+</head>
+<body>
+
+<h1> Répertoirede recettes communautives </h1>
+
+<!-- Conteneur principal pour le centrage du contenu -->
+<div class="container mt-5">
+    <!-- Ligne de la grille Bootstrap pour organiser le contenu en deux colonnes -->
+    <div class="row">
+        <!-- Colonne de gauche pour le formulaire d'ajout dune recette -->
+        <div class="col-md-6">
+
+            <!-- Titre de la section d'ajout de recette -->
+            <h2>Ajouter une recette</h2>
+
+            <!-- Formulaire pour ajouter une nouvelle recette à la liste -->
+            <form id="form-ajout-recette">
+                <!-- Groupe de formulaire pour le nom d'une recette -->
+                <div class="form-group">
+                    <label for="Nom-recette">Nom de la recette :</label> <br>
+                    <input type="text" class="form-nom" id="nom-recette" required>
+                </div>
+
+
+                <!-- Groupe de formulaire pour les ingrédients -->
+                <div class="form-group">
+                    <label for="ingredients" id="ingredients"> Ingredients :</label> <!-- à reviser pour le id -->
+                    <!-- Bootstrap 'row' pour aligner les inputs horizontalement ? -->
+                    <div class="row">
+                        <div class="col-12">
+                            <!-- input 1 -->
+                            <input type="text" class="form-ingredients" placeholder="Ingrédient 1" required>
+                            <input type="text" class="form-quantite" placeholder="quantite 1" required>
+                        </div>
+                    </div>
+                    <div class="row mt-2"> <!-- 'mt-2' ajoute une marge au-dessus de la seconde rangée pour l'espacement -->
+                        <div class="col-12">
+                            <!-- input 2 -->
+                            <input type="text" class="form-ingredients" placeholder="Ingrédient 2" required>
+                            <input type="text" class="form-quantite" placeholder="quantite 2" required>
+                        </div>
+                    </div>
+                    <div class="row mt-2"> <!-- 'mt-2' ajoute une marge au-dessus de la seconde rangée pour l'espacement -->
+                        <div class="col-12">
+                            <!-- input 3 -->
+                            <input type="text" class="form-ingredients" placeholder="Ingrédient 3">
+                            <input type="text" class="form-quantite" placeholder="quantite 3">
+                        </div>
+                    </div>
+                    <div class="row mt-2"> <!-- 'mt-2' ajoute une marge au-dessus de la seconde rangée pour l'espacement -->
+                        <div class="col-12">
+                            <!-- input 4 -->
+                            <input type="text" class="form-ingredients" placeholder="Ingrédient 4">
+                            <input type="text" class="form-quantite" placeholder="quantite 4">
+                        </div>
+                    </div>
+                    <div class="row mt-2"> <!-- 'mt-2' ajoute une marge au-dessus de la seconde rangée pour l'espacement -->
+                        <div class="col-12">
+                            <!-- input 5 -->
+                            <input type="text" class="form-ingredients" placeholder="Ingrédient 5">
+                            <input type="text" class="form-quantite" placeholder="quantite 5">
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Groupe de formulaire pour les instructions -->
+                <div class="form-group">
+                    <label for="instructions"> Instructions :</label>
+                    <textarea class="form-control w-75 p-3" id="instructions"  required> </textarea>
+                </div>
+
+                <!-- Boutons pour ajouter l'item à la liste ou annuler le formulaire -->
+                <button type="submit" class="btn btn-primary" id="bouton-ajouter">Ajouter la recette</button>
+
+            </form>
+        </div>
+
+        <!-- Colonne de droite pour afficher la liste des recettes -->
+        <div class="col-md-6">
+
+            <!-- Titre de la liste -->
+            <!-- jai pris ce code d'un siteweb : https://getbootstrap.com/docs/4.0/components/list-group/ -->
+            <h2>Recettes</h2>
+            <!-- La liste des recettes s'affichera ici dans une liste de groupe Bootstrap -->
+            <ul class="list-group" id="liste-recettes">
+                <!-- Les recettes ajoutées apparaitront ici -->
+                <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h5 class="mb-1">Nom de la recette</h5>
+                    </div>
+                    <li>
+                        <ul class="list-group" id="liste-ingredients">
+                            ingredients et quantitées
+                        </ul>
+                    </li>
+                    <small> instructions </small>
+                </a>
+
+
+            </ul> <!-- a travailler plus tard -->
+
+
+        </div>
+
+    </div>
+</div>
+</body>
+</html>
